@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <title>M Noor e Nazar Banner</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* ===== Banner ===== */
+        .banner {
+            width: 1584px;
+            height: 396px;
+            background: #020617;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            color: white;
+        }
+
+        /* Subtle Grid */
+        .banner::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Cyan Glow */
+        .banner::after {
+            content: "";
+            position: absolute;
+            top: -120px;
+            right: -120px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, #22D3EE 0%, transparent 70%);
+            opacity: 0.5;
+        }
+
+        /* ===== Left Section ===== */
+        .left-section {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            padding: 70px 80px;
+        }
+
+        /* Profile Image */
+        .profile-wrapper {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin-right: 40px;
+        }
+
+        .profile-wrapper::before {
+            content: "";
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #22D3EE 0%, transparent 70%);
+            opacity: 0.6;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+        }
+
+        .tech-icon {
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 3px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+            /* subtle shadow */
+        }
+
+
+
+        /* Text */
+        .text-content {
+            max-width: 600px;
+        }
+
+        .name {
+            font-size: 56px;
+            font-weight: 800;
+        }
+
+        .role {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #6366F1;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .meta {
+            margin-top: 18px;
+            font-size: 15px;
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+
+        /* ===== Glass Card ===== */
+        .card {
+            position: absolute;
+            right: 89px;
+            top: 18px;
+            width: 460px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            z-index: 2;
+        }
+
+        .card h3 {
+            margin: 0 0 25px 0;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Tech Grid */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        /* Tech Item */
+        .tech-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 14px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-family: 'JetBrains Mono', monospace;
+            transition: 0.3s ease;
+        }
+
+        .tech-item:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border: 1px solid #6366F1;
+        }
+
+        /* Icon */
+        .tech-icon {
+            width: 18px;
+            display: flex;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        /* Availability Box */
+        .availability {
+            margin-top: 15px;
+            padding: 12px 15px;
+            border-radius: 12px;
+            background: rgba(34, 211, 238, 0.08);
+            border: 1px solid rgba(34, 211, 238, 0.4);
+            font-size: 14px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Open To Work Badge */
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            background: #16A34A;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* Rank Text */
+        .rank {
+            position: absolute;
+            bottom: 18px;
+            right: 40px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner">
+
+
+        <div class="left-section">
+
+            <div class="profile-wrapper">
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQHXMDE4jlXIxg/feedshare-shrink_800/B4EZl1bEqtHoAg-/0/1758611656181?e=2147483647&v=beta&t=kRoycABFO8v02jYhZ9VJ4uhBlG8KayNhSYsC2alDLc4"
+                    alt="M Noor e Nazar" class="profile-img">
+            </div>
+
+            <div class="text-content">
+
+                <div class="name">M Noor e Nazar</div>
+                <div class="role">
+                    Frontend Engineer • React & Next.js
+                </div>
+                <div class="meta">
+                    Frontend Developer @ JTechsight<br>
+                    BS Computer Science – FUUAST<br>
+                    Karachi, Pakistan • 500+ Connections
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div>
+                <h3>CORE STACK</h3>
+                <div class="badge">OPEN TO WORK</div>
+            </div>
+            <div class="tech-grid">
+
+                <div class="tech-item">
+                    <span class="tech-icon"></span>
+                    <span>React.js</span>
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-icon"></span>
+                    <span>Next.js</span>
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-icon"></span>
+                    <span>TypeScript</span>
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-icon"></span>
+                    <span>Tailwind CSS</span>
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-icon"></span>
+                    <span>REST APIs</span>
+                </div>
+
+                <div class="tech-item">
+                    <span class="tech-icon"></span>
+                    <span>Vercel</span>
+                </div>
+
+            </div>
+
+
+            <div class="availability">
+                🟢 Available for freelance (7PM–12AM PKT)
+            </div>
+
+            <div class="availability">
+                🟢 Ranked on Google for "Noor Nazar Web Dev"
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
